@@ -1,43 +1,31 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport'
 
 import { fn } from 'storybook/test';
 
-import MyHeader from '../components/Header.vue';
+import Header from '../components/Header.vue';
 
 const meta = {
-  title: 'Example/Header',
-  component: MyHeader,
-  render: (args: any) => ({
-    components: { MyHeader },
-    setup() {
-      return { args };
-    },
-    template: '<my-header :user="args.user" />',
-  }),
-  parameters: {
-    layout: 'fullscreen',
-  },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
-  },
+  title: 'Templates/Header',
+  component: Header,
   tags: ['autodocs'],
-} satisfies Meta<typeof MyHeader>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedIn: Story = {
-  args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
+export const Desktop: Story = {
+  globals: {
+    viewport: { 
+      value: 'desktop'
+    }
+  }  
 };
 
-export const LoggedOut: Story = {
-  args: {
-    user: null,
-  },
+export const Mobile: Story = {
+  globals: {
+    viewport: { 
+      value: 'mobile1'
+    }
+  }  
 };
