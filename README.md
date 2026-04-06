@@ -19,7 +19,7 @@
 - [ ] `Card` (по 1 баллу за варианты `Detail Card` и `Category Card`)
 - [ ] `ProductCard` (3 балла)
 - [x] `Pagination`
-- [ ] `PriceFilter` (3 балла)
+- [ ] `PriceFilter` (4 балла)
 
 ### Шаблоны
 
