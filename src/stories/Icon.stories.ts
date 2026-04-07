@@ -9,7 +9,12 @@ const meta = {
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: ["twitter", "close", "toEdit"] },
+    variant: {
+      control: 'select',
+      options: [
+        "twitter", "close", "toEdit", "burger", "cameras", "headphones", "phones", "smartWatches", "delivery", "guaranteed", "stock", "battery", "computers", "gaming", "location", "shipping", "favorites", "cart", "search",
+        "computersLarge", "gamingLarge", "headphonesLarge"]
+    },
   },
   decorators: [
     (story, { args }) => {

@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport'
 
-import { fn } from 'storybook/test';
-
 import Header from '../components/Header.vue';
 
 const meta = {
